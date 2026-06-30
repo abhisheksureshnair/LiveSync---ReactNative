@@ -1,97 +1,156 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# LiveSync
 
-# Getting Started
+### Real-Time Family Safety, GPS Tracking & Digital Wellbeing
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+![React Native](https://img.shields.io/badge/React%20Native-0.8x-blue)
+![Platform](https://img.shields.io/badge/iOS-Android-success)
+![License](https://img.shields.io/badge/License-MIT-green)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![Status](https://img.shields.io/badge/Status-Active-success)
 
-## Step 1: Start Metro
+LiveSync is a premium React Native application for secure real-time location sharing, family safety, and smart device management. Its modular architecture makes it suitable for family tracking, school transportation, employee location monitoring, and other location-based solutions.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+---
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## 📸 Media Gallery
 
+### Brand Visuals
+<p align="left">
+  <img src="src/assets/image/app_logo.png" width="120" alt="LiveSync Logo" style="margin-right: 20px;" />
+  <img src="src/assets/image/sync_bot.png" width="160" alt="SyncBot Mascot" />
+</p>
+
+### Global Sync Network Backdrop
+<img src="src/assets/image/loginbackground.png" width="100%" alt="Theme Background" />
+
+---
+
+## Privacy & Security
+
+LiveSync is designed for authorized family use only.
+
+Location sharing requires explicit permission from the tracked device.
+
+All communication should be encrypted using HTTPS and secure authentication.
+
+Parents retain full control over linked devices and permissions.
+
+
+---
+
+## 🚀 Categorized Features
+
+### 1. Live Tracking & Locator
+* **Real-time Map Preview**: Visual feedback on coordinates coupled with status overlays for Speed, Battery, and Network status. Uses [map.png](file:///Volumes/Untitled/Innspark/Self%20Project/VTSSchool/TraqinnParent/src/assets/image/map.png) coordinates.
+* **Dynamic Switcher**: Toggle tracking views seamlessly between multiple children (Liam and Sophia).
+* **Trip Logs**: Replay routes taken and view travel history distance/duration metrics.
+
+### 2. Safety & Phone Management
+* **Safe Zone Geofencing**: Add custom geofences with a live visual range circle that expands and contracts dynamically in real time.
+* **App Controls**: Remotely block social media apps, set daily screen limits, or toggle Homework Focus Mode.
+
+### 3. Smart Assistant & Reports
+* **SyncBot AI Assistant**: Chat helper chatbot character styled with transparent, matching deep-navy branding.
+* **Weekly Commute Analytics**: Commute distance bar charts and Safe Zone time distribution indicators.
+
+---
+
+## Environment Variables
+
+Create a `.env` file.
+
+```env
+GOOGLE_MAPS_API_KEY=
+API_URL=
+SOCKET_URL=
+```
+
+---
+
+## 🔑 Test Login Credentials
+
+To bypass the verification login flow during local development, use these credentials on the Login screen:
+* **Phone Number**: `1234567890`
+* **Verification OTP**: `1234`
+
+---
+
+## 🏁 Getting Started
+
+### Step 1: Install Dependencies
+Run from the root of your project:
 ```sh
-# Using npm
+npm install
+```
+
+### Step 2: iOS CocoaPods Installation (Mac Only)
+Navigate to the `ios` directory and run:
+```sh
+cd ios && pod install && cd ..
+```
+
+### Step 3: Run Metro Bundler
+Start the Metro server:
+```sh
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Build and run your app
+### Step 4: Run the Application
+Open a new terminal window and run:
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
+**iOS Simulator:**
 ```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+**Android Emulator:**
+```sh
+npm run android
+```
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+---
 
-## Step 3: Modify your app
+## 🎨 Design & Theme Mappings
 
-Now that you have successfully run the app, let's make changes!
+### Typography
+The application uses the **Poppins** typeface to establish a modern, clean, and premium visual identity. The font weights are globally mapped inside the project theme directory (`src/theme/Typography.js`):
+* `Poppins-Light` — Used for small body labels or muted secondary stats.
+* `Poppins-Regular` — General body copy and text inputs.
+* `Poppins-Medium` — Default button actions, status indicators, and dropdown labels.
+* `Poppins-Bold` — Primary headers, child avatar banners, and main statistic values.
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### Frosted Glassmorphism
+Premium glassmorphic card styling is implemented dynamically across both themes to create depth:
+* **Light Theme**: Overlays use solid `#FFFFFF` or translucent `#EFF4FA` backing with thin border separators to keep the interface feeling clean and polished.
+* **Dark Theme**: Uses semi-translucent slate backdrops (`rgba(30, 41, 59, 0.85)`) coupled with light border highlights (`rgba(255, 255, 255, 0.15)`) to create a floating frosted glass effect.
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+---
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+## Roadmap
 
-## Congratulations! :tada:
+- [x] Live Tracking
+- [x] Family Profiles
+- [x] AI Assistant
+- [x] Reports
+- [x] Safe Zones
+- [ ] Push Notifications
+- [ ] SOS Emergency
+- [ ] Voice Commands
+- [ ] Apple Watch Support
+- [ ] Wear OS Support
+- [ ] Offline Tracking Cache
+- [ ] Web Dashboard
 
-You've successfully run and modified your React Native App. :partying_face:
+---
 
-### Now what?
+## Contributing
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+Pull requests are welcome.
 
-# Troubleshooting
+For major changes, please open an issue first to discuss your ideas.
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+---
 
-# Learn More
+## License
 
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project is licensed under the MIT License.
