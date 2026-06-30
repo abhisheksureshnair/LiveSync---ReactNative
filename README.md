@@ -1,27 +1,21 @@
-# LiveSync
+<p align="center">
+  <img src="src/assets/image/badge.png" width="380" alt="LiveSync Logo Badge" />
+</p>
 
-### Real-Time Family Safety, GPS Tracking & Digital Wellbeing
+<p align="center">
+  <b>Real-Time Family Safety, GPS Tracking & Digital Wellbeing</b>
+</p>
 
-![React Native](https://img.shields.io/badge/React%20Native-0.8x-blue)
-![Platform](https://img.shields.io/badge/iOS-Android-success)
-![License](https://img.shields.io/badge/License-MIT-green)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
-![Status](https://img.shields.io/badge/Status-Active-success)
+<p align="center">
+  <img src="https://img.shields.io/badge/React%20Native-0.8x-blue?style=for-the-badge" alt="React Native" />
+  <img src="https://img.shields.io/badge/Platform-iOS%20%7C%20Android-success?style=for-the-badge" alt="Platform" />
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Status" />
+</p>
 
 LiveSync is a premium React Native application for secure real-time location sharing, family safety, and smart device management. Its modular architecture makes it suitable for family tracking, school transportation, employee location monitoring, and other location-based solutions.
 
----
-
-## 📸 Media Gallery
-
-### Brand Visuals
-<p align="left">
-  <img src="src/assets/image/app_logo.png" width="120" alt="LiveSync Logo" style="margin-right: 20px;" />
-  <img src="src/assets/image/sync_bot.png" width="160" alt="SyncBot Mascot" />
-</p>
-
-### Global Sync Network Backdrop
-<img src="src/assets/image/loginbackground.png" width="100%" alt="Theme Background" />
 
 <!-- ---
 
