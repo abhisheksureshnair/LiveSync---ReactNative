@@ -23,7 +23,7 @@ LiveSync is a premium React Native application for secure real-time location sha
 ### Global Sync Network Backdrop
 <img src="src/assets/image/loginbackground.png" width="100%" alt="Theme Background" />
 
----
+<!-- ---
 
 ## Privacy & Security
 
@@ -36,7 +36,7 @@ All communication should be encrypted using HTTPS and secure authentication.
 Parents retain full control over linked devices and permissions.
 
 
----
+--- -->
 
 ## 🚀 Categorized Features
 
@@ -123,23 +123,6 @@ The application uses the **Poppins** typeface to establish a modern, clean, and 
 Premium glassmorphic card styling is implemented dynamically across both themes to create depth:
 * **Light Theme**: Overlays use solid `#FFFFFF` or translucent `#EFF4FA` backing with thin border separators to keep the interface feeling clean and polished.
 * **Dark Theme**: Uses semi-translucent slate backdrops (`rgba(30, 41, 59, 0.85)`) coupled with light border highlights (`rgba(255, 255, 255, 0.15)`) to create a floating frosted glass effect.
-
----
-
-## Roadmap
-
-- [x] Live Tracking
-- [x] Family Profiles
-- [x] AI Assistant
-- [x] Reports
-- [x] Safe Zones
-- [ ] Push Notifications
-- [ ] SOS Emergency
-- [ ] Voice Commands
-- [ ] Apple Watch Support
-- [ ] Wear OS Support
-- [ ] Offline Tracking Cache
-- [ ] Web Dashboard
 
 ---
 
