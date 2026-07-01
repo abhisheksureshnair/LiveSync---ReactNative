@@ -59,6 +59,113 @@ API_URL=
 SOCKET_URL=
 ```
 
+For local backend development, point `API_URL` to the Node.js backend:
+
+```env
+# iOS Simulator
+API_URL=http://localhost:8000
+
+# Android Emulator
+API_URL=http://10.0.2.2:8000
+```
+
+---
+
+## Backend API
+
+This repository includes a JavaScript/Node.js backend in the `backend` directory. It provides demo API endpoints for authentication, children, live location, geofences, controls, reports, notifications, app updates, and SyncAssist chatbot replies.
+
+### Backend Setup
+
+Install backend dependencies:
+
+```sh
+cd backend
+npm install
+```
+
+Start the backend API:
+
+```sh
+npm run dev
+```
+
+The backend runs on:
+
+```txt
+http://localhost:8000
+```
+
+Health check:
+
+```sh
+curl http://localhost:8000/health
+```
+
+### Backend Environment Variables
+
+Copy `backend/.env.example` to `backend/.env` and adjust values as needed:
+
+```env
+PORT=8000
+NODE_ENV=development
+APP_NAME=LiveSync
+CURRENT_VERSION=1.0.0
+LATEST_VERSION=1.0.0
+FORCE_UPDATE=false
+UPDATE_URL=
+AUTH_TOKEN_SECRET=dev-secret-change-me
+ALLOWED_ORIGINS=*
+```
+
+### Demo Backend Login
+
+Use the same local development credentials:
+
+```json
+{
+  "phoneNumber": "1234567890",
+  "otp": "1234"
+}
+```
+
+Verify OTP:
+
+```sh
+curl -X POST http://localhost:8000/api/auth/verify-otp \
+  -H "Content-Type: application/json" \
+  -d "{\"phoneNumber\":\"1234567890\",\"otp\":\"1234\"}"
+```
+
+Use the returned token for protected routes:
+
+```http
+Authorization: Bearer <token>
+```
+
+### Main Backend Endpoints
+
+* `GET /health`
+* `POST /api/auth/request-otp`
+* `POST /api/auth/verify-otp`
+* `POST /api/auth/logout`
+* `POST /api/update/check`
+* `GET /api/profile`
+* `GET /api/children`
+* `GET /api/children/:childId/location`
+* `PATCH /api/children/:childId/location`
+* `GET /api/children/:childId/history`
+* `GET /api/children/:childId/reports/weekly`
+* `GET /api/children/:childId/controls`
+* `PATCH /api/children/:childId/controls`
+* `GET /api/children/:childId/geofences`
+* `POST /api/children/:childId/geofences`
+* `DELETE /api/children/:childId/geofences/:geofenceId`
+* `GET /api/notifications`
+* `PATCH /api/notifications/:notificationId/read`
+* `DELETE /api/notifications`
+* `POST /api/assistant/message`
+
 ---
 
 ## 🔑 Test Login Credentials
